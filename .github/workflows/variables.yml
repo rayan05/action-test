@@ -27,6 +27,7 @@ jobs:
       VAR_1: "BBBBB"
       VAR_2: $ENV_VAR2
       VAR_3: ${{ vars.ENVIRONMENT_V1 }}
+      VAR_4: ${{ inputs.environment_name == 'Development' && 'Dev'|| 'Prod' }}
       
     steps:
     - name: Show default environment variables
@@ -40,4 +41,5 @@ jobs:
         echo "VAR_1: ${{ env.VAR_1 }}"
         echo "VAR_2:" ${{ env.VAR_2 }}
         echo "VAR_3:" ${{ env.VAR_3 }}
+        echo "VAR_4:" ${{ env.VAR_4 }}
         
