@@ -36,6 +36,6 @@ jobs:
         echo "ENV_VAR2:" ${{ env.ENV_VAR2 }}
         echo "ENV_VAR3:" ${{ env.ENV_VAR3 }}
         echo "-----------------------------------"
-        echo "VAR_1: ${{ VAR_1 }}"
-        echo "VAR_2:" ${{ VAR_2 }}
+        echo "VAR_1: ${{ env.VAR_1 }}"
+        echo "VAR_2:" ${{ env.VAR_2 }}
         
