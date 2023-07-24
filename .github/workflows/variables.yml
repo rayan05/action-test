@@ -26,6 +26,7 @@ jobs:
     env:
       VAR_1: "BBBBB"
       VAR_2: $ENV_VAR2
+      VAR_3: ${{ environment.ENVIRONMENT_V1 }}
       
     steps:
     - name: Show default environment variables
@@ -38,4 +39,5 @@ jobs:
         echo "-----------------------------------"
         echo "VAR_1: ${{ env.VAR_1 }}"
         echo "VAR_2:" ${{ env.VAR_2 }}
+        echo "VAR_3:" ${{ env.VAR_3 }}
         
