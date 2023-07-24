@@ -13,8 +13,8 @@ on:
 
 env:
   WORKING_DIR: "./appservice"
-  VAR1: "AAA AAA AAA"
-  VAR2: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+  ENV_VAR1: "AAA AAA AAA"
+  ENV_VAR2: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
   
 jobs:
   deploy:
@@ -29,5 +29,5 @@ jobs:
       shell: bash
       run: |
         echo "Working DIR: $WORKING_DIR"
-        echo "VAR1:" $env.VAR1
-        echo "VAR2:" ${{ env.VAR2 }}
+        echo "VAR1: $ENV_VAR1" 
+        echo "VAR2:" ${{ env.ENV_VAR2 }}
