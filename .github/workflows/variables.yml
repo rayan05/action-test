@@ -13,8 +13,8 @@ on:
 
 env:
   WORKING_DIR: "./appservice"
-  VAR1: "deployment.tfplan"
-  Var2: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+  VAR1: "AAA AAA AAA"
+  VAR2: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
   
 jobs:
   deploy:
@@ -28,6 +28,6 @@ jobs:
     - name: Show default environment variables
       shell: bash
       run: |
-        echo "subsid $TF_VAR_AZURE_SUBSCRIPTION_ID"
-        echo "Subscription ID:" $env.TF_VAR_AZURE_SUBSCRIPTION_ID
-        echo "Client ID:" ${{ env.TF_VAR_AZURE_CLIENT_ID }}
+        echo "Working DIR: $WORKING_DIR"
+        echo "VAR1:" $env.VAR1
+        echo "VAR2:" ${{ env.VAR2 }}
