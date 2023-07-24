@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VAR_1: "BBBBB"
-      VAR_2: ${{ env.ENV_VAR2 }}
+      VAR_2: $ENV_VAR2
       
     steps:
     - name: Show default environment variables
