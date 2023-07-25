@@ -33,6 +33,7 @@ jobs:
     - name: Show default environment variables
       shell: bash
       run: |
+        echo "Environment name: ${{ inputs.environment_name }}"
         echo "Working DIR: $WORKING_DIR"
         echo "ENV_VAR1: $ENV_VAR1" 
         echo "ENV_VAR2:" ${{ env.ENV_VAR2 }}
